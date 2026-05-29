@@ -16,7 +16,7 @@ body {
 }
 
 /* Classes utilitárias estruturais */
-.container {
+.sc_giovane_container {
     width: 95%;
     max-width: 1250px;
     margin: 0 auto;
