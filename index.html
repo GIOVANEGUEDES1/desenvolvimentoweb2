@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>O Biotonico - Edição de Jornal 1957</title>
+    <!-- Vinculação do arquivo de estilização externo -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- ========================================================================
+         VISÃO 1: CAPA DO JORNAL (Página Principal)
+         ======================================================================== -->
+    <div id="view-capa" class="spa-view is-active">
+        
+        <!-- Cabeçalho em Estilo Frontispício de Jornal Antigo -->
+        <header class="container newspaper-header">
+            <div class="header-meta flex">
+                <span>ANO XL</span>
+                <span>SÃO PAULO, 1957</span>
+                <span>EDIÇÃO NACIONAL</span>
+            </div>
+            
+            <div class="header-title-block">
+                <h1 class="newspaper-logo">O BIOTÔNICO</h1>
+                <p class="newspaper-slogan">"Mensageiro da Saúde, da Lavoura e do Lar"</p>
+            </div>
+
+            <div class="header-sub-meta flex">
+                <span>Propriedade do Laboratório Fontoura</span>
+                <span class="dev-tag">Diretor-Chefe: <strong>Giovane Guedes Santos</strong></span>
+                <span>Preço Cr$ 2,00</span>
+            </div>
+        </header>
+
+        <main class="container main-layout">
+            <!-- MANCHETE PRINCIPAL DO DIA -->
+            <section class="front-page-hero card">
+                <div class="headline-block">
+                    <span class="kicker">GRANDE ACONTECIMENTO LITERÁRIO E SOCIAL</span>
+                    <h2>JECA TATU: O RESSURGIMENTO DE UM HOMEM!</h2>
+                    <p class="sub-headline">A imortal obra de conscientização de Monteiro Lobato retorna em edição comemorativa de 40 anos de circulação nacional.</p>
+                </div>
+
+                <div class="hero-columns grid">
+                    <div class="hero-image-wrapper">
+                        <img src="capaalmanaque.png" alt="Capa Jeca Tatu 1957" class="newspaper-photo">
+                        <span class="photo-caption">Flagrante do caboclo Jeca Tatu, símbolo do despertar da saúde nas populações rurais do país.</span>
+                    </div>
+                    
+                    <div class="hero-text-column">
+                        <p class="dropcap">A</p>
+                        <p class="news-p">história que comoveu e transformou o Brasil profundo ganha novas páginas explicativas sobre a importância do saneamento e do vigor físico. O Jeca Tatu, outrora símbolo de abandono e fadiga, encontra no maravilhoso Biotônico a força motriz para o seu reerguimento completo, servindo de exemplo prático para todos os trabalhadores do nosso solo.</p>
+                        <p class="news-p">Esta folha orgulha-se de estampar o guia completo de utilidades que acompanha este clássico da nossa literatura, integrando ensinamentos práticos que vão da lavoura ao bem-estar do ambiente doméstico.</p>
+                        
+                        <button type="button" class="btn-newspaper js-nav" data-target="#view-marco">
+                            CONTINUA NA PÁGINA INTERNA (MARÇO) →
+                        </button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- COLUNAS SECUNDÁRIAS (NOTICIÁRIO DE RODAPÉ) -->
+            <section class="grid secondary-columns">
+                <article class="news-column">
+                    <h3>ESPORTES & HUMOR</h3>
+                    <h4 class="sub-title">As crônicas da semana</h4>
+                    <p class="news-p">Uma seleção fina de piadas de salão, anedotas e charges satíricas direto da capital. Veja também o balanço das crônicas esportivas e o movimento dos principais clubes do país neste início de ano.</p>
+                </article>
+
+                <article class="news-column">
+                    <h3>GUIA DA LAVOURA</h3>
+                    <h4 class="sub-title">Instruções para o campo</h4>
+                    <p class="news-p">Agrônomos renomados detalham os conselhos agrícolas necessários para o pequeno e o grande produtor, trazendo tabelas de plantio específicas para o clima de cada região brasileira e orientações para a medicina veterinária.</p>
+                </article>
+
+                <article class="news-column">
+                    <h3>UTILIDADES DO LAR</h3>
+                    <h4 class="sub-title">O conselheiro das famílias</h4>
+                    <p class="news-p">Tudo o que a dona de casa precisa saber para a boa condução do lar: o horóscopo do mês atualizado pelos astros, as previsões do tempo e as tabelas com as fases lunares fundamentais para as atividades domésticas.</p>
+                </article>
+            </section>
+        </main>
+
+        <footer class="container newspaper-footer">
+            <div class="footer-line flex">
+                <p>FCMSCSP - Faculdade de Ciências Médicas da Santa Casa de São Paulo</p>
+                <p>ADS - Turma 1A — Desenvolvimento Web</p>
+                <p>AV2 - Prof. Ismar Frango &copy; 2026</p>
+            </div>
+        </footer>
+    </div>
+
+
+    <!-- ========================================================================
+         VISÃO 2: PÁGINAS INTERNAS (Suplemento de Março)
+         ======================================================================== -->
+    <div id="view-marco" class="spa-view">
+        
+        <header class="container newspaper-header internal-page-header">
+            <div class="header-meta flex">
+                <button type="button" class="btn-back js-nav" data-target="#view-capa">← VOLTAR À PRIMEIRA PÁGINA</button>
+                <span class="section-title">SUPLEMENTO MENSAL DE MARÇO</span>
+                <span>PÁGS. 6 E 7</span>
+            </div>
+            <div class="internal-dev-credit">
+                Redator Especialista: <strong>Giovane</strong> | Curso de Análise e Desenvolvimento de Sistemas
+            </div>
+        </header>
+
+        <main class="container internal-layout grid">
+
+            <!-- COLUNA DA ESQUERDA (PÁGINA 6: CIÊNCIA E VARIEDADES) -->
+            <div class="newspaper-page-column">
+                <div class="page-number-label">PÁGINA 6 — CIÊNCIA E CURIOSIDADES</div>
+                
+                <article class="news-article">
+                    <h2 class="article-title">O infinitamente pequeno</h2>
+                    <p class="news-p">Os átomos, grãos da matéria, os elétrons, grãos de eletricidade, os fótons, grãos de luz, são os três corpúsculos fundamentais em que se baseia a física moderna. A matéria pode ser dividida em partículas extremamente pequenas sem perder nenhuma de suas propriedades essenciais.</p>
+                    <p class="news-p">O ouro, por exemplo, mediante o simples processo do martelo, pode ser transformado em lâminas tão finas que seria necessário empilhar dez mil delas para se obter uma espessura de um milímetro. A divisibilidade da matéria não é entretanto infinita e o termo extremo dessa divisão, a partícula menor que se pode encontrar em estado livre é chamada de molécula.</p>
+                    <p class="news-p">Os meios de observação de que se dispõe atualmente, os melhores microscópios ópticos ou eletrônicos, mesmo os ultramicroscópicos, não permitem ver diretamente a molécula isolada. O tamanho de tais moléculas é da ordem de 2,2 milionésimos de milímetro, ou 22 angströms.</p>
+                </article>
+
+                <section class="newspaper-ad-box">
+                    <div class="ad-box-title">ANÚNCIOS DE ESCAPATÓRIA</div>
+                    <p class="ad-caption">Coligidos dos jornais de grande circulação de todo o mundo:</p>
+                    
+                    <div class="classified-item">
+                        <p><strong>QUARTO:</strong> Precisa-se quarto mobiliado para cavalheiro só, de cinco metros de comprido por quatro de largura...</p>
+                    </div>
+                    <div class="classified-item">
+                        <p><strong>ANIMAL:</strong> Vende-se um mastim. Come de tudo. Mostra grande predileção pelas crianças.</p>
+                    </div>
+                    <div class="classified-item">
+                        <p><strong>PROCURA-SE:</strong> Vende-se um Burro, um violino e outros animais. Tratar com o moço da estrebaria.</p>
+                    </div>
+                </section>
+
+                <section class="commercial-display-ad">
+                    <h3 class="ad-headline">Feliz e despreocupada nos trinta dias do mês!...</h3>
+                    <p><strong>ELA</strong> está livre das moléstias peculiares à mulher, livre do mal-estar e dores periódicas, porque regulariza as funções do útero e corrige os seus distúrbios, usando o maravilhoso...</p>
+                    <div class="ad-brand">REGULADOR FONTOURA</div>
+                </section>
+            </div>
+
+            <!-- COLUNA DA DIREITA (PÁGINA 7: ALMANAQUE E SERVIÇOS) -->
+            <div class="newspaper-page-column">
+                <div class="page-number-label">PÁGINA 7 — GUIA DO POVO</div>
+                
+                <section class="almanac-widget">
+                    <div class="almanac-title-block">
+                        <h2>MARÇO</h2>
+                        <p class="almanac-subtitle">31 Dias - Ano de 1957 — Signo: Pisces</p>
+                    </div>
+
+                    <div class="almanac-row grid">
+                        <div class="almanac-box">
+                            <h3>Fases da Lua</h3>
+                            <ul class="bullet-newspaper">
+                                <li><strong>Lua nova:</strong> dia 1</li>
+                                <li><strong>Quarto crescent:</strong> dia 9</li>
+                                <li><strong>Lua cheia:</strong> dia 15</li>
+                                <li><strong>Quarto minguante:</strong> dia 23</li>
+                                <li><strong>Lua nova:</strong> dia 31</li>
+                            </ul>
+                        </div>
+
+                        <div class="almanac-box">
+                            <h3>Horóscopo</h3>
+                            <p class="news-p italic-text">As pessoas nascidas no período de 22 de fevereiro a 21 de março estão sob a influência do planeta Júpiter, signo de Pisces. Essa posição do Zodíaco favorece a simpatia, a fidelidade e o devotamento. São generosas e inclinadas a dispensar proteção aos ofendidos.</p>
+                        </div>
+                    </div>
+
+                    <div class="almanac-box agriculture-block">
+                        <h3>A Lavoura do Mês (Instruções Regionais)</h3>
+                        <p class="news-p"><strong>Norte —</strong> Nas terras firmes, semeiam-se as hortaliças, transplantando-se as semeadas em fevereiro. Planta-se e transplanta-se o fumo. Ainda se capinam os canaviais e outras culturas.</p>
+                        <p class="news-p"><strong>Brasil Central —</strong> Prepara-se a terra para as culturas de trigo, cevada, centeio, ervilhas, linho, etc., e inicia-se o plantio do abacaxi; semeiam-se as hortaliças; começa a colheita do algodão, do arroz, do fumo e termina a da batata doce, alfafa e amendoim.</p>
+                        <p class="news-p"><strong>Sul —</strong> É a época mais própria para a vindima e a vinificação. Continua-se a areadura das terras. É a melhor época para a semeadura da alfafa.</p>
+                    </div>
+                </section>
+
+                <section class="comic-strip-newspaper">
+                    <span class="comic-tag">MOMENTO DE HUMOR DA FOLHA</span>
+                    <div class="comic-frame">
+                            <img src="Risos.png" alt="Charge de Humor" style="width:100%; height:auto;">
+                </section>
+            </div>
+
+        </main>
+
+        <footer class="container newspaper-footer">
+            <div class="footer-line flex">
+                <p>Suplemento de Utilidade Pública — Proibida a venda separada</p>
+                <p>Componente Curricular: Desenvolvimento Web</p>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Vinculação da lógica de script externo -->
+    <script src="script.js"></script>
+</body>
+</html>

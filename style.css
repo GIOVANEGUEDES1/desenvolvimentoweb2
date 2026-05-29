@@ -1,0 +1,475 @@
+/* ========================================================================
+   1. RESET E DEFINIÇÕES GERAIS DE TIPOGRAFIA (JORNAL TRADICIONAL)
+   ======================================================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f4edd9; /* Tom de papel antigo envelhecido */
+    color: #1c1a17; /* Tinta preta de jornal desgastada */
+    font-family: 'Georgia', 'Times New Roman', Times, serif; /* Tipografia jornalística */
+    line-height: 1.5;
+    padding: 10px 0;
+}
+
+/* Classes utilitárias estruturais */
+.container {
+    width: 95%;
+    max-width: 1250px;
+    margin: 0 auto;
+}
+
+.flex {
+    display: flex;
+}
+
+.grid {
+    display: grid;
+}
+
+/* Controle do Motor de Roteamento SPA */
+.spa-view {
+    display: none;
+    min-height: 100vh;
+}
+.spa-view.is-active {
+    display: block;
+}
+
+/* ========================================================================
+   2. ELEMENTOS DO DESIGN DE JORNAL IMPRESSO (FRONTISPÍCIO E LINHAS)
+   ======================================================================== */
+.newspaper-header {
+    border-bottom: 6px double #1c1a17;
+    margin-bottom: 25px;
+    padding-bottom: 10px;
+    text-align: center;
+}
+
+.header-meta, .header-sub-meta {
+    justify-content: space-between;
+    font-size: 0.85rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 5px 0;
+    border-bottom: 1px solid #1c1a17;
+}
+
+.header-sub-meta {
+    border-bottom: 2px solid #1c1a17;
+    border-top: 1px solid #1c1a17;
+    margin-top: 5px;
+}
+
+.header-title-block {
+    padding: 20px 0;
+}
+
+.newspaper-logo {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 5rem;
+    font-weight: 900;
+    letter-spacing: -2px;
+    text-transform: uppercase;
+    line-height: 1;
+}
+
+.newspaper-slogan {
+    font-style: italic;
+    font-size: 1.1rem;
+    margin-top: 5px;
+}
+
+.dev-tag {
+    font-family: 'Arial', sans-serif;
+    background-color: #1c1a17;
+    color: #f4edd9;
+    padding: 0 8px;
+    border-radius: 2px;
+}
+
+/* Parágrafo padrão estilo coluna de jornal */
+.news-p {
+    text-align: justify;
+    text-indent: 20px;
+    font-size: 0.95rem;
+    margin-bottom: 8px;
+}
+
+/* Letra capitular para início de grandes reportagens */
+.dropcap {
+    float: left;
+    font-size: 3.5rem;
+    line-height: 0.8;
+    padding-top: 4px;
+    padding-right: 8px;
+    font-weight: bold;
+    font-family: 'Times New Roman', serif;
+}
+
+/* ========================================================================
+   3. MANCHETE DE CAPA E DIAGRAMAÇÃO EM COLUNAS
+   ======================================================================== */
+.front-page-hero {
+    border-bottom: 3px solid #1c1a17;
+    padding-bottom: 25px;
+    margin-bottom: 25px;
+}
+
+.headline-block {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.headline-block .kicker {
+    font-size: 0.9rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #cc3325;
+    letter-spacing: 1.5px;
+}
+
+.headline-block h2 {
+    font-size: 2.8rem;
+    font-weight: 900;
+    line-height: 1.1;
+    margin: 5px 0 10px 0;
+    letter-spacing: -1px;
+}
+
+.headline-block .sub-headline {
+    font-size: 1.2rem;
+    font-style: italic;
+    max-width: 800px;
+    margin: 0 auto;
+    color: #444;
+}
+
+/* Layout da área da manchete principal */
+.hero-columns {
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+
+.hero-image-wrapper {
+    text-align: center;
+    border: 1px solid #1c1a17;
+    padding: 8px;
+    background-color: #fff;
+}
+
+.newspaper-photo {
+    width: 100%;
+    max-width: 380px;
+    height: auto;
+    filter: grayscale(100%) contrast(120%); /* Filtro de foto de jornal antigo */
+    border: 1px solid #1c1a17;
+}
+
+.photo-caption {
+    display: block;
+    font-size: 0.8rem;
+    font-style: italic;
+    margin-top: 5px;
+    line-height: 1.3;
+}
+
+.hero-text-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+/* Botão estilo chamada de jornal */
+.btn-newspaper {
+    display: block;
+    background-color: #1c1a17;
+    color: #f4edd9;
+    padding: 10px 15px;
+    font-family: 'Arial Black', sans-serif;
+    font-size: 0.85rem;
+    font-weight: bold;
+    text-align: center;
+    border: none;
+    cursor: pointer;
+    margin-top: 15px;
+    letter-spacing: 1px;
+    transition: background 0.2s;
+}
+
+.btn-newspaper:hover {
+    background-color: #cc3325;
+}
+
+/* Colunas secundárias inferiores da primeira página */
+.secondary-columns {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    padding-bottom: 25px;
+}
+
+.news-column {
+    border-right: 1px dashed #1c1a17;
+    padding-right: 15px;
+}
+
+.news-column:last-child {
+    border-right: none;
+    padding-right: 0;
+}
+
+.news-column h3 {
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    border-bottom: 2px solid #1c1a17;
+    padding-bottom: 3px;
+    margin-bottom: 8px;
+    letter-spacing: 0.5px;
+}
+
+.news-column .sub-title {
+    font-size: 1rem;
+    font-style: italic;
+    margin-bottom: 10px;
+    font-weight: normal;
+}
+
+/* ========================================================================
+   4. SUPLEMENTO DA PÁGINA INTERNA (MARÇO)
+   ======================================================================== */
+.internal-page-header .section-title {
+    font-family: 'Times New Roman', serif;
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+.internal-dev-credit {
+    font-size: 0.85rem;
+    text-align: right;
+    margin-top: 4px;
+    font-style: italic;
+}
+
+.btn-back {
+    background-color: transparent;
+    border: 1px solid #1c1a17;
+    padding: 2px 8px;
+    font-family: Arial, sans-serif;
+    font-size: 0.75rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+.btn-back:hover {
+    background-color: #1c1a17;
+    color: #f4edd9;
+}
+
+.internal-layout {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+.page-number-label {
+    font-size: 0.8rem;
+    font-weight: bold;
+    border-bottom: 1px solid #1c1a17;
+    padding-bottom: 2px;
+    margin-bottom: 15px;
+    letter-spacing: 1px;
+}
+
+.article-title {
+    font-size: 1.8rem;
+    font-weight: bold;
+    line-height: 1.2;
+    margin-bottom: 12px;
+}
+
+/* Caixa de Anúncios Classificados Retrô */
+.newspaper-ad-box {
+    border: 2px solid #1c1a17;
+    padding: 15px;
+    margin: 25px 0;
+    background-color: #faf6eb;
+}
+
+.ad-box-title {
+    font-family: 'Arial Black', sans-serif;
+    font-size: 0.9rem;
+    text-align: center;
+    background-color: #1c1a17;
+    color: #f4edd9;
+    padding: 3px 0;
+    margin-bottom: 10px;
+}
+
+.ad-caption {
+    font-size: 0.8rem;
+    font-style: italic;
+    text-align: center;
+    margin-bottom: 12px;
+}
+
+.classified-item {
+    font-size: 0.85rem;
+    border-bottom: 1px dotted #1c1a17;
+    padding: 6px 0;
+}
+.classified-item:last-child {
+    border-bottom: none;
+}
+
+/* Anúncio Comercial com Borda Grande */
+.commercial-display-ad {
+    border: 4px double #cc3325;
+    padding: 20px;
+    text-align: center;
+    background-color: #fff;
+    margin-top: 20px;
+}
+
+.commercial-display-ad .ad-headline {
+    color: #cc3325;
+    font-size: 1.4rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.commercial-display-ad p {
+    font-size: 0.9rem;
+    margin-bottom: 12px;
+}
+
+.ad-brand {
+    background-color: #cc3325;
+    color: white;
+    font-family: 'Impact', 'Arial Black', sans-serif;
+    font-size: 1.5rem;
+    padding: 5px;
+    letter-spacing: 2px;
+}
+
+/* Bloco do Almanaque / Calendário */
+.almanac-widget {
+    background-color: #fff;
+    border: 1px solid #1c1a17;
+    padding: 20px;
+}
+
+.almanac-title-block {
+    text-align: center;
+    border-bottom: 2px solid #1c1a17;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+}
+
+.almanac-title-block h2 {
+    font-size: 2.2rem;
+    letter-spacing: 5px;
+}
+
+.almanac-subtitle {
+    font-size: 0.85rem;
+    text-transform: uppercase;
+}
+
+.almanac-row {
+    grid-template-columns: 1fr;
+    gap: 15px;
+}
+
+.almanac-box h3 {
+    font-size: 1rem;
+    text-transform: uppercase;
+    border-bottom: 1px solid #1c1a17;
+    margin-bottom: 8px;
+    color: #cc3325;
+}
+
+.bullet-newspaper {
+    list-style-type: square;
+    padding-left: 20px;
+    font-size: 0.9rem;
+}
+
+.italic-text {
+    font-style: italic;
+}
+
+.agriculture-block {
+    margin-top: 15px;
+    padding-top: 15px;
+    border-top: 1px dashed #1c1a17;
+}
+
+/* Quadrinho de Charge de Jornal */
+.comic-strip-newspaper {
+    margin-top: 25px;
+    border: 1px dashed #1c1a17;
+    padding: 12px;
+}
+
+.comic-tag {
+    font-size: 0.75rem;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.comic-frame {
+    border: 2px solid #1c1a17;
+    background-color: #fff;
+    padding: 30px 15px;
+    text-align: center;
+}
+
+.comic-dialogue {
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
+/* ========================================================================
+   5. RODAPÉ GERAL DE IMPRENSA & MEDIA QUERIES (RESPONSIVIDADE)
+   ======================================================================== */
+.newspaper-footer {
+    border-top: 4px double #1c1a17;
+    margin-top: 30px;
+    padding: 10px 0;
+}
+
+.footer-line {
+    justify-content: space-between;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    flex-wrap: wrap;
+}
+
+/* Responsividade para telas maiores: Ativação das colunas reais de jornal */
+@media (min-width: 768px) {
+    .hero-columns {
+        grid-template-columns: 1fr 1.3fr;
+    }
+}
+
+@media (min-width: 900px) {
+    .internal-layout {
+        grid-template-columns: 1fr 1fr; /* Duas páginas abertas lado a lado */
+        gap: 30px;
+    }
+    
+    .almanac-row {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .newspaper-page-column:first-child {
+        border-right: 1px solid #1c1a17;
+        padding-right: 20px;
+    }
+}
